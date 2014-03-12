@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Enter Authorization Code</title>
+</head>
+<body>
+<p th:text="${errorMessage}"/>
+<form th:action="@{/verify2fa}" method="post">
+    <div><label> Auth Code : <input type="text" name="authcode"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+</body>
+</html>
