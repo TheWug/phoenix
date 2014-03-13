@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>vCHS Login</title>
+		<link rel="stylesheet" media="screen" href="../resources/css/login.css"/>
+    	<link rel="shortcut icon" type="image/png" href="../resources/images/favicon.ico"/>
+    </head>
+    <body>
+     <div class="LoginScreen">
+     <div class="topcontainer">
+            <div class="contentcontainer">
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+        <form th:action="@{/login}" method="post">
+            <div class="form-input">
+            <label class="loginLabels"> User Name : </label><input class="loginField" type="text" name="username"/></div>
+            <div class="form-input">
+            <label class="loginLabels"> Password:  </label><input class="loginField" type="password" name="password"/></div>
+            <div><input class="green-btn btn-m" type="submit" value="Sign In"/></div>
+        </form>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

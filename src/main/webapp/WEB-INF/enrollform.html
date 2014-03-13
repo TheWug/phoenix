@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Enter two consecutive codes to enroll</title>
+<link rel="stylesheet" media="screen" href="../resources/css/home.css" />
+
+  <link rel="stylesheet" media="screen"
+	href="../resources/css/bootstrap.min.css" /> 
+<link rel='stylesheet' type='text/css'
+	href='../resources/css/styles.css' />
+
+<link rel="shortcut icon" type="image/png"
+	href="../resources/images/favicon.ico" />
+<style>
+.hero-unit {
+	color: #000000;
+	background-color: #838B8B;
+	font-size: 16px;
+}
+
+.custom-font {
+	color: #000000;
+	font-size: 16px;
+}
+
+.main-cnt-space {
+	margin-top: 0px;
+	margin-left: 100px;
+}
+
+.inner-cnt-space {
+	margin-top: 150px;
+	margin-left: 120px;
+	width: 300px;
+	height: 160px;
+}
+.horizontal-tab {
+	margin-left:100px;
+}
+body {
+	background-color: #e0e0e0;
+}
+
+</style>
+</head>
+<body>
+	<div>
+	
+		<img src="../resources/images/bg-wrapper.gif"
+			style="position: fixed; top: 0px; left: 0px;" width="100%" /> <br />
+		<br /> 
+		<img src="../resources/images/vmware-black.png" /> <font
+			size="6" color="black">&nbsp; vCHS Token Enroll</font>
+			
+	</div>
+
+
+	<div id='cssmenu'>
+	
+		<ul>
+			<li><a th:href='@{/gohome}'><span>Home</span></a></li>
+			<li class='last'><a th:href='@{/logout}'><span>Sign
+						Out</span></a></li>
+
+		</ul>
+	</div>
+	
+	<div class="main-cnt-space">
+	<table border="0">
+	<tr>
+	<td>
+		<p th:text="${errorMessage}" />
+		<p class="custom-font">Please use the following Secret Key:
+		<p th:text="${sharedSecret}" /></p>
+		<!--<img th:src="'https://chart.googleapis.com/chart?chs=200x200&amp;cht=qr&amp;chl=otpauth://totp/'+${username}+'@google.com?secret='+${sharedSecret}+''"></img>-->
+		<p class="custom-font">Alternatively, scan the following QR code</p>
+		
+		<img class="img-rounded"
+			th:src="'data:image/png;base64,'+${sharedSecretBase64}+''" /> <br />
+		</td>
+		<td>
+		<div class="hero-unit inner-cnt-space">
+			<form class="form-inline" th:action="@{/enroll2fa}" method="post">
+				<dl class="dl-horizontal">
+					<dt>
+						<label> Authentication Code One: &nbsp;&nbsp;</label>
+					</dt>
+					<dd>
+						<input type="text" class="input-small" name="code1" />
+					</dd>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<dt>
+						<label> Authentication Code Two: &nbsp;&nbsp;</label>
+					</dt>
+					<dd>
+						<input class="input-small" type="text" name="code2" />
+					</dd>
+				</dl>
+						<input class="btn btn-success btn-medium horizontal-tab" type="submit"
+							value="Activate 2FA" />
+				</form>
+		</div>
+		
+		</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

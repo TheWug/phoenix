@@ -1,0 +1,335 @@
+/*
+ * ***********************************************************
+ *  Copyright (c) 2012 VMware, Inc.  All rights reserved.
+ * **********************************************************
+ */
+@import url('webfontskit.css');
+html {
+  background: #19335c url(../images/bg-login-gradient.png) center top repeat-x;
+} 
+* {
+    margin: 0;
+}
+
+body {
+ font: 13px Arial,Helvetica,sans-serif;
+ color: #706f72;
+}
+
+a {
+  font-weight: bold;
+  color: #3d6285;
+  text-decoration: none;
+}
+
+.pagesize {
+    min-height: 500px;
+}
+
+.LoginScreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-wrapper.gif) left top repeat-x; 
+}
+
+.LoginScreen h3 {
+    margin-bottom: 10px;
+}
+
+#UnsupportedBrowserWarning {
+    background-color: lightyellow;
+    color: #333333;
+    height: 18px;
+    font-weight: bold;
+    padding: 3px 0 3px 20px;
+}
+
+.supported-browser {
+    display: none;
+}
+
+form {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+
+.topcontainer {
+  width: 100%;
+}
+
+.contentcontainer {
+  width:650px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px #19345d;
+}
+
+.contentcontainer.first-login {
+  margin-top: 50px;
+}
+
+.apptitle {
+  margin:0 0 0 10px;
+
+  display:inline-block;
+  *display:inline;
+  zoom:1; 
+}
+
+.login{
+  margin: 20px 0 0 0;
+}
+
+.loginArea {
+    bottom:50px;left:0;position:fixed;width:100%;
+}
+
+.loginErrorText {
+    font-family: "Helvetica Neue",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans",sans-serif;
+    font-size:12px;
+    color: #6699CC;
+    font-weight: bold;
+}
+
+h2.login-greeting {
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
+.form-title {
+  font-size: 14px;
+}
+
+.tos-container {
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+}
+
+.tos-container p {
+  margin: 10px 0 5px 0;
+}
+
+.tos-container .tos-link {
+  margin: 20px 0;
+}
+
+.tos-checkbox {
+  margin-top: 15px
+}
+
+.header-body {
+  padding: 20px 40px;
+  background: url(../images/vmw-logo-gr.png) left center no-repeat;  
+  font-family:'ProximaNovaSoft-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  padding:0 0 0 125px;
+  margin: 0 0 20px 0;
+
+}
+
+p.intro {
+  margin: 0 0 20px 0;
+}
+
+.form-input {
+  margin: 0 40px 20px 40px;
+}
+
+.form-input label {
+  display: block;
+  font-family:'ProximaNovaSoft-Regular';
+  font-weight: normal;
+  font-style: normal; 
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.form-input .loginField {
+  width:100%;
+  height: 30px;
+  padding: 0 5px;
+}
+
+.green-btn {
+  font-family:'ProximaNovaSoft-Regular';
+  font-weight: normal;
+  font-style: normal; 
+  font-size: 20px;  
+  color: #fff;
+  border: none;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.green-btn.disabled {
+  color: #b2b2b2;
+}
+
+.btn-m {
+  background: url(../images/btn-green.png) top left no-repeat;
+  height: 40px;
+  width: 171px;
+}
+
+.btn-m.disabled {
+  background: url(../images/btn-m-dis.png) top left no-repeat;
+}
+
+.submit-form-input {
+  width: 100%;
+}
+
+.submit-form-input button{
+  margin: 0 auto 10px auto;
+}
+
+.forgot-pw-link, .tos-cancel {
+  width: 100%;
+  text-align: center;;
+
+}
+
+.forgot-pw-link a{
+  font: 12px Arial,Helvetica,sans-serif;
+  color: #706f72;
+  text-decoration: underline;
+}
+.tos-cancel a {
+    color:#706f72;
+    font-weight:normal;
+}
+
+.error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;margin-top:1em;border:2px solid #ddd;}
+.error {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4; font-size: 12px}
+.success {background: #b9fb7b;color: #008a0b;border-color: #008a0b; font-size: 12px}
+
+.overlay {
+    display: none;
+    background-color:#000;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.wait {width:200px;margin: 10px 0 0 0;display:none}
+
+.success-message, .error-message {
+  margin: 20px 0;
+  padding: 4px 20px 20px 20px;
+  background-color: #f0f1f1;
+  color: #cc0000;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.error-message .pointer {
+  background: url(../images/pointer-gr-up.png) top left no-repeat;
+  width: 27px;
+  height: 14px;
+  position: relative;
+  top: -16px;
+  left: 30px;
+}
+.error-message .details {
+  font-size: 12px;
+  font-weight: normal;
+  color: #706f72;
+  margin-top: 15px;
+}
+
+#footer {
+    background-color: #0A0A0D;
+    clear: both;
+    color: #999999;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+}
+#footer .content {
+   padding: 10px 0 10px 30px;
+}
+#footer a {
+    color: #CCCCCC;
+    font-weight: bold;
+}
+
+.first-login-inputs {
+  width: 50%;
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+  vertical-align: top;
+}
+
+.first-login-inputs .form-input .loginField{
+  width: 95%;
+}
+
+.first-login-inputs .form-input {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.password-rules {
+  width: 45%;
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+  background-color: #deeff7;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 28px;
+}
+
+.password-rules ul{
+  padding-left: 20px;
+}
+
+div.sid-accept {
+  padding-top: 8px;
+}
+
+div.sid-accept span {
+    margin-right: 20px;
+}
+
+span.service-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+span.service-tos-url {
+  text-decoration: underline;
+
+}
+div.tos-section {
+  padding-bottom: 10px;
+}
+
+div.tos-section div {
+    padding-top: 5px;
+}
+
+div.tos-section .tos-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+#tos-agree {
+  margin-right: 5px
+}

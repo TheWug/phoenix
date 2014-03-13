@@ -108,12 +108,12 @@ public class Controllers {
 	}
 
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	@RequestMapping(value = "/gotocp", method = RequestMethod.GET)
+	@RequestMapping(value = "/controlPanel", method = RequestMethod.GET)
 	public String gotocp(Model model) {
 		if (validateEnrolled()) {
-			model.addAttribute("isEnrolled", "Unenroll");
+			model.addAttribute("isEnrolled", "Unenroll Two Factor Authentication");
 		} else {
-			model.addAttribute("isEnrolled", "Enroll");
+			model.addAttribute("isEnrolled", "Enroll Two Factor Authentication");
 		}
 		return "controlPanel";
 	}

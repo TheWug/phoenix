@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<link rel="stylesheet" media="screen" href="../resources/css/home.css" />
+ 	<link rel="shortcut icon" type="image/png" href="../resources/images/favicon.ico"/>
+   
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+<link rel='stylesheet' type='text/css'
+	href='../resources/css/styles.css' />
+
+
+<head>
+<title>Vmware vCloud Hybrid Authorization</title>
+</head>
+
+<body>
+<div>
+<img src="../resources/images/bg-wrapper.gif" style="position:fixed;top:0px;left:0px;" width="100%" />
+		
+		<br/><br/>
+	
+&nbsp;
+
+    <img src="../resources/images/vmware-black.png"/>
+    	
+    	<font size="6" color= "black">&nbsp; vCloud Hybrid Service</font>
+    </div>
+    
+        
+<div id='cssmenu'>
+
+<br/>
+<p th:text="${errorMessage}"/>
+<form th:action="@{/verify2fa}" method="post">
+    <div><p style='padding-left : 30px'><label>Enter the Authentication Code : <input type="text" name="authcode"/> </label></p></div>
+    <div><p style='padding-left : 300px'>
+    <input type="submit" value="Sign In"/></p></div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Vmware vCloud Hybrid Service</title>
+<link rel="stylesheet" media="screen" href="../resources/css/home.css" />
+<link rel="shortcut icon" type="image/png"
+	href="../resources/images/favicon.ico" />
+
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+<link rel='stylesheet' type='text/css'
+	href='../resources/css/styles.css' />
+
+
+</head>
+<body>
+	
+	<div>
+	<img src="../resources/images/bg-wrapper.gif" style="position:fixed;top:0px;left:0px;" width="100%" />
+		
+		<br/><br/>
+		<img src="../resources/images/vmware-black.png" /> <font
+			size="6" color="black">&nbsp; vCloud Hybrid Service</font>
+			<br/>
+			
+	</div>
+	<div id='cssmenu'>
+		<div id='cssmenu'>
+			<ul>
+				<li><a th:href='@{/controlPanel}'><span>Control
+							Panel</span></a></li>
+				<li class='last'><a th:href='@{/logout}'><span>Sign
+							Out</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+

@@ -1,0 +1,2007 @@
+/*
+ * ***********************************************************
+ *  Copyright (c) 2013 VMware, Inc.  All rights reserved.
+ * **********************************************************
+ */
+@import url('webfontskit.css');
+html {
+  background-color: #e0e0e0;
+} 
+
+body {
+  color: #717073;
+  font-family: Arial,helvetica,sans-serif;
+  font-size: 12px;
+}
+
+.main-panel {
+    /*background: url(../images/bg-wrapper.gif) left top repeat-x; */
+}
+
+h1 {
+    font-size: 138.5%;
+}
+
+.header-body {
+  color:#fff;
+}
+
+#footer {
+    color: #706f72;
+    padding: 0 5px 5px 25px;
+}
+
+.header-body {
+    white-space: nowrap;
+    background: transparent;
+}
+
+.header-body.x-panel-default {
+    padding: 0;
+}
+
+#app-header-component .x-panel-default {
+  background-color: transparent;
+}
+
+.global-banner-container {
+    width: 100%;
+}
+
+#app-header-component .global-banner-container {
+    padding: 10 0;
+    background-color: #FFFFCC;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+#app-header-component .global-banner-container span {
+    font: 12px arial,sans-serif;
+    color: #333333;
+    white-space: normal;
+    text-transform: none;
+}
+
+.global-banner-container .x-panel-header-default-top  {
+    padding: 0 0 0 80px;
+}
+
+.global-banner-container .x-panel-header {
+    background: url('../images/vmware/unhappy-cloud-alert.png') 15px 2px no-repeat;
+}
+
+.north-main-panel {
+    padding: 10px 25px 0 25px;
+}
+
+.header-body .logo h1 {
+  margin:0 0 0 10px;
+  color: #333;
+  font-family:'ProximaNovaSoft-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 32px;
+  padding:0;
+  display:inline-block;
+  *display:inline;
+  zoom:1; 
+}
+
+.btn-header .x-btn-inner{
+  color:#333;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+#logo {
+    width: 100%;
+    display:inline-block;
+    *display:inline;
+}
+
+.logo .logoimg {
+  position:relative;
+  top:1px;
+}
+
+.region-list .x-form-text {
+    background: url("../images/vmware/arrow-large.png") no-repeat scroll 125px center #D7D7D7;
+    border-radius: 0;
+    border: 1px solid #A1A2A2;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.2) inset;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+.region-list.x-boundlist {
+    border-radius: 0 0 3px 3px / 0 0 8px 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.region-list .x-boundlist-list-ct {
+    padding: 6px 1px;
+}
+.region-list .x-boundlist-item {
+    border: medium none;
+    outline: medium none;
+    color: #979698;
+    padding: 4px 0 4px 32px;
+    background: url("../images/vmware/icon-datacenter.png") no-repeat scroll 0 center transparent;
+    background-position:10px;
+}
+.region-list .x-boundlist-item.list-item-custom {
+    background-image: url("../images/vmware/icon-tools.png");
+}
+.region-list .x-boundlist-item-separator {
+    border: none;
+    background: #A1A2A2;
+    color: #A1A2A2;
+    height:1px;
+}
+/*.region-list .x-boundlist-item.x-boundlist-item-over,*/
+.region-list .x-boundlist-item.x-boundlist-selected {
+    background-color: transparent;
+    color: #3D6285;
+    font-weight: bold;
+}
+
+.region-default button {
+    background: url(../images/vmware/icon_pin_undocked.png);
+    height: 16px;
+    width: 16px;
+}
+.region-default.x-btn-pressed button {
+    background: url(../images/vmware/icon_pin_docked.png);
+}
+
+#app-header-component .global-alert-container {
+    background-color: white;
+}
+
+.timeout-error {
+    background: url(../images/vmware/icon_warning_20x20.png) no-repeat;
+}
+
+.global-alert-container {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 10px 10px 10px 20px;
+    border: 2px solid gray;
+    margin: 0 25px;
+}
+
+.global-alert-container .x-panel-header {
+    background: url('../resources/themes/images/ares/icon/16-alert.png') 3px 2px no-repeat;
+}
+
+.global-alert-container .x-panel-header-default-top {
+    padding: 0 0 0 25px;
+}
+.global-alert-container .x-panel-body, .global-banner-container .x-panel-body   {
+    height: 0px;
+}
+
+#main-card-layout {
+    padding: 0;
+}
+#main-card-layout .x-panel-body.x-panel-body.x-panel-body-default.x-layout-fit {
+    background-color: #e0e0e0;
+    border: 0px;
+}
+#main-container-body .x-panel-body.x-panel-body.x-panel-body-default.x-layout-fit {
+    background-color: #ffffff;
+}
+
+#region-dashboard {
+    border-radius: 4px;
+}
+#region-dashboard-header .view-title {
+    font-family: 'ProximaNovaSoft-Semibold';
+    font-size: 24px;
+    padding: 3px 6px;
+}
+#region-dashboard-header .form-label {
+    top: 10px;
+    font-family: 'arial';
+    font-size: 14px;
+    font-weight: normal;
+    color: #717073;
+}
+#region-dashboard-header input {
+    background: url("../images/vmware/arrow-large.png") no-repeat scroll 125px center #FFFFFF;
+    border-radius: 0;
+    border: 1px solid #A1A2A2;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.2) inset;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+#region-dashboard .x-panel-body.x-panel-body.x-panel-body-default.x-layout-fit {
+    background-color: #ffffff;
+}
+#region-dashboard  .x-grid-table {
+    border-color: #333333;
+    border-width: 1px 0 0 0;
+}
+#region-dashboard .x-grid-cell-inner {
+    padding-top: 0;
+    height: auto;
+    line-height: normal;
+}
+#region-dashboard .x-grid-cell {
+    border-color: #9b9b9b;
+    border-width: 0 0 1px 0;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+
+#region-dashboard .region-separator {
+    border-color: #434343;
+}
+
+#region-dashboard .large-cell-value {
+    color: #434343;
+    font-family: arial;
+    font-size: 18px;
+}
+#region-dashboard .small-cell-label, #region-dashboard .resource-purchased {
+    color: #434343;
+    font-family: arial;
+    font-size: 12px;
+}
+#region-dashboard .small-cell-value, #region-dashboard .resource-label {
+    color: #434343;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+}
+#region-dashboard .big-cell-number {
+    color: #434343;
+    font-family: arial;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#main-container {
+    padding: 0; // fix a gap between tabs and tab panels
+}
+
+#loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a345b url(../images/vmware/bg-portal-gr-outer.png) left top repeat-x;
+    z-index: 20000;
+}
+
+#loading {
+    color:#ffffff;
+    position: absolute;
+    top: 50%;
+    left:45%;
+    z-index: 20001;
+}
+
+#loading .logo {
+    background:url(../images/vmware/vmware-white.png) no-repeat;
+    position:absolute;
+    display:block;
+    top:-15px;
+    left:25px;
+    width:71px;
+    height:11px;
+}
+
+.icon-add-16 {
+    background-image: url(../vendor/fam/add.png) !important;
+}
+
+/* password meter */
+.strengthMeter {
+ /*border: 1px solid #B5B8C8;*/
+ margin: 0 0 3px 0;
+ background: url( ../images/pmeter/meter.gif) no-repeat;
+ height: 5px;
+ background-size: 100%;
+ width: auto;
+}
+
+/* password meter */
+.scoreBar {
+ background: url(../images/pmeter/meter_background.gif) no-repeat;
+ height: 5px;
+ background-size: 100%;
+ line-height: 1px;
+ font-size: 1px;
+ float: right;
+}
+
+.errorWin {
+    font-family: arial,sans-serif;
+}
+
+.errorWin h1 {
+    font-size:16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.errorWin p {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.breadcrumbs a {
+  color:#706F72;
+  text-decoration: none;
+}
+
+.breadcrumbs .tier-link {
+  text-decoration: underline;
+}
+
+.x-menu-icon-separator {
+  display: none;
+}
+
+/******************************************************************************
+*                                 IE Fixes                                   *
+*******************************************************************************/
+.x-tab em {line-height: normal;}
+.x-ie7p .inner-tab-panel > .x-panel-body-default, .x-ie8p .inner-tab-panel > .x-panel-body-default {
+  border: 1px solid #ddd;
+}
+
+.x-ie8p .inner-tab-panel .x-tab-default-top {
+  border: 1px solid #ddd;
+}
+
+.x-ie8p .inner-tab-panel .x-tab {
+  border-width: 1px !important;
+}
+
+.x-ie8p .inner-tab-panel .x-tab-bar .x-tab-inner {
+  text-overflow: clip;
+  overflow: visible;
+  padding-right: 4px;
+}
+
+/******************************************************************************
+*                                 Dashboard                                   *
+*******************************************************************************/
+
+#vmcounttotal, #ipcounttotal {
+    font-size: 64px;
+    font-family:'ProximaNovaSoft-Bold';
+    text-align: center;
+}
+
+#vmcountdetails .show-on-hover, #ipcountdetails .show-on-hover {
+    visibility: hidden;
+    text-align: center;
+
+}
+
+#vmcountdetails .show-on-hover a, #ipcountdetails .show-on-hover a {
+  text-decoration: none;
+  color:#706f72;
+  font-weight: bold;
+}
+
+.snapshotbar1-container, .snapshotbar2-container, .snapshotbar3-container {
+  margin: 5px 0 20px 0;
+}
+
+.snapshot-resource-graph .resource:first-child, .vdc-resource-graph .resource:first-child  {
+  margin-top: 25px;
+}
+
+#dashboard-vdc-list-header {
+  background-color: #fff;
+  background-image: none;
+}
+
+#dashboard-add-vdc-btn {
+  box-shadow: -1px 0 2px #CCCCCC;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 6px;  
+    border-color: #EBEBEB;
+}
+
+div.vdc-card {
+    float: left;
+    width: 330px;
+    height: 210px;
+    background-color: white;
+    margin: 5px;
+    padding: 18px;
+    border: 2px solid #eee;
+}
+
+.cloud-info-vdc-card {
+  padding: 0 18px 18px 18px;
+}
+
+div.vdc-card:hover, div.vdc-card.x-item-selected {
+  box-shadow: 3px 3px 13px #BBBBBB;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7E7E7;    
+}
+
+/*div.vdc-card.x-item-selected {border: 4px solid #000;}*/
+
+div.vdc-card p.x-panel-header-text-default {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+
+div.vdc-card p.cloud, div.vdc-card p.group {padding: 5px 0;}
+div.vdc-card span.cloud-name, div.vdc-card span.group-name {color: #777;}
+div.vdc-card p.group {margin-bottom: 18px;}
+
+.tooltip-anchor:hover {
+  text-decoration: underline;
+}
+
+.tooltip-anchor {
+  cursor: pointer;
+}
+
+#vdc-resource-graph .resource:first-child {
+  margin-top: 5px;
+}
+#vdc-resource-graph div.resource {
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 7px;
+}
+#vdc-resource-graph div.resource.editable-vdc-resource:hover {
+    background-color: #DFEFF7;
+    cursor: pointer;
+}
+
+div.vdc-card div.resource, div.cloud-info-vdc-card div.resource {margin-top: 12px; display: block; overflow: hidden; width: 100%;}
+div.resource-text {height: 18px;}
+div.snapshot-resource-graph div.resource, div.vdc-resource-graph div.resource {overflow: hidden;}
+div.vdc-card p.resource-total, div.cloud-info-vdc-card p.resource-total, div.vdc-resource-graph p.resource-total, div.snapshot-resource-graph p.resource-total {float: left;}
+div.vdc-card p.resource-used, div.cloud-info-vdc-card p.resource-used, div.vdc-resource-graph p.resource-used, div.snapshot-resource-graph p.resource-used,
+    div.vdc-card span.resource-usage, div.cloud-info-vdc-card span.resource-usage {float: right; font-size: 0.8em; padding-top: 2px;}
+div.vdc-card span.resource-label, div.cloud-info-vdc-card span.resource-label, div.snapshot-resource-graph span.resource-label, div.vdc-resource-graph span.resource-label {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+div.snapshot-resource-graph span.resource-label, div.vdc-resource-graph span.resource-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.x-panel-body .wizardinstruction {
+     font-size: 14px;
+     font-weight: bold;
+     margin: 10px 0 0 20px;
+ }
+p.resourcesize {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+p.resourcesizedetails {
+    margin-bottom: 3px;
+}
+.x-panel-body .form-label {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+}
+.x-panel-body .unit.before-gap {
+    display: inline-block;
+    width: 80px;
+}
+span.submit-button {
+    color: #777;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.x-border-layout-ct {
+ /* background-color: #fff;*/
+}
+
+.create-vdc-select-size-button-group .x-btn-default-small-disabled .x-btn-inner {
+  color: #e1e1e1;
+}
+
+.create-vdc-select-size-button-group .x-btn-default-small .x-btn-inner {
+  color: #717073;
+}
+
+.create-vdc-select-size-button-group .x-btn-default-small-disabled {
+  background-color: #fff;
+  background-image: none;
+}
+
+#resource-allocation-modal .form-label {
+    width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ares-modal.x-window-default {
+  background-color: #fff;
+}
+.ares-modal .x-window-header-default-top {
+  background-color: #fff;
+}
+.ares-message.x-window-default, .ares-message .x-window-header-default-top, .ares-message .x-window-body {
+    background-color: #fff;
+}
+.ares-message .error-icon {
+    background: url(../images/vmware/icon_error_20x20.png) no-repeat;
+    width: 25px;
+    height: 20px;
+}
+
+/* 
+* Add VDC wizard
+*/
+.add-vdc-wizard-cloud-selector.x-panel-default{
+  cursor: pointer;
+  margin: 0 0 15px 0;
+  padding: 15px;
+}
+.add-vdc-wizard-cloud-selector.x-panel-default.x-item-selected, .add-vdc-wizard-cloud-selector.x-panel-default:hover {
+  box-shadow: 3px 3px 13px #BBBBBB;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7E7E7;   
+} 
+
+.add-vdc-wizard-cloud-selector.name {
+   font-size: 1.4em;
+   font-weight: normal !important;
+}
+.add-vdc-wizard-cloud-selector.field.cloud-title {
+    font-size: 16px;
+    font-family:'ProximaNovaSoft-Regular';
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+.add-vdc-wizard-cloud-selector.field {
+    font-size: 16px;
+    font-weight: bold;
+    width: 16%;
+    display: inline-block;
+    overflow: hidden;
+    *display:inline;
+    zoom:1;
+}
+
+.add-vdc-wizard-cloud-list-header {
+    margin-bottom: 10px;
+}
+
+.add-vdc-wizard-cloud-list-header {
+  font-family:'ProximaNovaSoft-Bold';
+  font-size: 14px;
+  padding: 0 0 0 15px;
+}
+
+.add-vdc-wizard-cloud-list-header .header-col.first-col {
+  font-family:'ProximaNovaSoft-Regular';
+  width: 30%;
+}
+
+.add-vdc-wizard-cloud-list-header .header-col {
+  width:15%;
+  display: inline-block;
+  *display:inline;
+  zoom:1;
+}
+
+#vdc-create-choose-how-to-use .x-panel-body {
+  font-family:'ProximaNovaSoft-Regular';
+  font-size: 22px;
+}
+
+#vdc-create-select-cloud-next-btn {
+  background-position: center;
+}
+
+.panel-large-title {
+  font-size: 24px;
+  line-height: normal;
+}
+
+.resource-count-label {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.resource-count-note {
+  font-size: 12px;
+  color: #a7a9ac;
+  font-style: italic;
+}
+
+.x-panel-header-default-top  {
+  padding: 0 0 20px 0;
+}
+
+.ares-modal-warning {
+  border: 2px solid #eee;
+  border-radius: 4px;
+  background: url('../resources/themes/images/ares/icon/16-alert.png') 10px 10px no-repeat;
+  padding: 20px 20px 20px 50px;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.ares-modal-warning strong {
+  font-weight: bold;
+}
+
+.ares-modal-warning ol {
+  margin: 10px 0 0 20px;
+}
+
+.ares-modal-warning ol li{
+  list-style: decimal outside none;
+}
+
+/******************************************************************************
+*                          Gateway List (BEGIN)                               *
+*******************************************************************************/
+
+div.gateway-card {
+    float: left;
+    width: 330px;
+    height: 210px;
+    background-color: white;
+    margin: 5px;
+    padding: 18px;
+    border: 2px solid #eee;
+}
+
+
+div.gateway-card-hover:hover,div.gateway-card.x-item-selected {
+  box-shadow: 3px 3px 13px #BBBBBB;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7E7E7;
+}
+
+.gateway-card .x-panel-body-default {
+  margin: 6px 0 0 0;
+}
+
+.gateway-card .prop-label {
+  width: 150px;
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+.gateway-card .prop-value {
+  font-weight: bold;
+}
+
+#global-gateway-list-view {
+  background-color: #fff;
+}
+
+#global-gateway-list-view h2.panel-large-title{
+  margin: 0 0 20px 0;
+}
+
+div.gateway-card p.x-panel-header-text-default {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    width:85%;
+}
+
+.icon-gateway-config-compact {
+  background: url(../images/icon_compact.png) left center no-repeat;
+  padding-left: 20px;
+}
+
+.icon-gateway-config-full {
+  background: url(../images/icon_full.png) left center no-repeat;
+  padding-left: 20px;  
+}
+
+.icon-gateway-ha-enabled {
+  background: url(../images/vmware/icon-switch-enable.png) left center no-repeat;
+  padding-left: 20px;  
+}
+
+.icon-gateway-ha-disabled {
+  background: url(../images/vmware/icon-switch-disable.png) left center no-repeat;
+  padding-left: 20px;    
+}
+
+.x-grid-row.gateway-service-disabled .x-grid-cell-inner {
+  font-style: italic;
+  color: grey;
+}
+
+.gateway-ip-separator{
+    border-bottom: 1px dotted #CCCCCC;
+    border-top: 1px dotted #CCCCCC;
+    font-weight: bold;
+    padding: 0 0 2px 4px;
+}
+.gateway-ip-separator-first{
+    border-top:none;
+}
+/******************************************************************************
+*                          Gateway List (END)                                 *
+*******************************************************************************/
+
+/*
+*  Table grid
+*/
+#vdc-virtual-machine-list-view .x-grid-center-icon, #global-virtual-machine-list-view .x-grid-center-icon {
+    cursor: pointer;
+}
+
+.x-grid-center-icon {
+  margin: 7px 0 0 4px;
+}
+.x-grid-with-row-lines .x-grid-cell-inner { font-size: 13px;}
+.x-grid-with-row-lines .x-grid-cell-inner a { text-decoration: none; color:#706F72;}
+.ares-header-lower .x-column-header-inner .x-column-header-text { text-transform: none;}
+.x-grid-with-row-lines .row-locked .x-grid-cell-inner {
+  color: #ccc;
+  background-color: #F7F7F7;
+}
+
+.x-grid-with-row-lines .x-grid-cell-inner .grid-cell-item-link{ 
+  color: #3d6285;
+  text-decoration:underline;
+  /*font-family:'ProximaNovaSoft-Semibold';
+  font-size: 16px;*/
+}
+
+.x-grid-with-row-lines .x-grid-cell-inner .grid-cell-item-region{
+  color: #3d6285;
+  font-family:'ProximaNovaSoft-Semibold';
+  font-size: 16px;
+}
+
+.x-grid-with-row-lines .x-grid-cell-inner .grid-cell-item-region-disabled{
+  cursor: default;
+  color: #706F72;
+  font-family:'ProximaNovaSoft-Semibold';
+  font-size: 16px;
+}
+
+.x-grid-with-row-lines .x-grid-cell-inner .unresolved{ 
+  text-decoration: none; 
+  color:#706F72;
+}
+
+.x-btn-default-toolbar-small-over {
+  background-image: none;
+  border-color:  transparent #CCCCCC;
+}
+
+/*
+* Filter toolbar 
+*/
+.ares-filter-toolbar {
+  background-color: #dfeff7;
+  background-image: none;
+  border-radius: 3px;
+  color: #706f72;
+  font-family: Arial;
+  border:none;
+}
+
+/*
+*  Search box
+*/
+.ares-search-field.x-field-default-toolbar .x-form-text{
+ background-color: #fff;
+ background-image: none;
+ border: 1;
+ border-radius: 10px 10px 10px 10px;
+ line-height: 30px;
+ height: 30px;
+}
+
+/*ares-search-field.x-field-default-toolbar .x-trigger-cell:nth-child(2) {
+  background-color: #fff;
+}*/
+
+.ares-search-field.x-field-default-toolbar .x-form-search-trigger {
+  background-image: url('../resources/themes/images/ares/icon/16-search.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-radius: 0 10px 10px 0;
+  height: 30px;
+  width: 25px;
+  border-bottom: none;
+}
+
+/*
+* Sidebar
+*/
+.panel-medium-title {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.sidebar-inline-title {
+  font-size: 16px;
+}
+
+.sidebar-small-title {
+  font: 12px Arial;
+}
+
+.sidebar-inline-value {
+    font: bold 12px Arial;
+}
+
+.sidebar-status-unlocked {
+  color:#6db33f;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  background: url("../resources/themes/images/ares/icon/16-unlocked.png") left center no-repeat;
+  padding: 0 0 0 20px;
+}
+
+.sidebar-status-locked {
+  color:#6db33f;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  background: url("../resources/themes/images/ares/icon/16-locked.png") left center no-repeat;
+  padding: 0 0 0 20px;
+}
+
+.btn-status-action {
+  padding: 5px;
+}
+
+.btn-status-action .x-btn-inner{
+    color: #706F72;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;  
+}
+
+.btn-action-disable {
+  padding: 4px;
+}
+
+.btn-action-disable .x-btn-inner{
+  color: #706F72;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;  
+}
+
+.btn-action-enable {
+  padding: 4px;
+}
+
+.btn-action-enable .x-btn-inner{
+    color: #6DB33F;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;  
+}
+
+.sidebar-status-quota {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 0 0 15px;
+}
+
+.sidebar-details {
+    font-family: Arial;
+    font-size: 12px;
+    font-style: italic;
+    padding-left: 20px;
+    display: block;
+}
+
+.sidebar-cloud-name {
+    font-size: 11px;
+    font-family: ProximaNovaSoft-Bold;
+    color: #3d6285;
+    padding-left: 20px;
+    background: url('../images/vmware/cloud.png') left center no-repeat;
+}
+
+.sidebar-status {
+/* width: 100%; */
+  margin: 3px 0;
+  padding: 2px 0 0 20px;
+  height: 18px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.sidebar-status.powered-on {
+  background-image: url('../resources/themes/images/ares/icon/16-power-on.png');
+}
+
+.sidebar-status.powered-off {
+  background-image: url('../resources/themes/images/ares/icon/16-power-off.png');
+}
+
+.sidebar-status.suspended {
+  background-image: url('../resources/themes/images/ares/icon/16-suspend.png');
+}
+
+.sidebar-status.expired {
+  background-image: url('../resources/themes/images/ares/icon/16-expired.png');
+}
+
+.ares-cpu-help, .ares-help{
+  background: url('../resources/themes/images/ares/icon/16-help.png') left center no-repeat;
+  padding: 0 0 0 16px;
+  cursor: pointer;
+}
+.ares-ip-help{
+  background: url('../resources/themes/images/ares/icon/16-help.png') left center no-repeat;
+  padding: 0 0 0 16px;
+  cursor: pointer;
+}
+.ares-vdc-help{
+    background: url('../resources/themes/images/ares/icon/16-help.png') left center no-repeat;
+    padding: 0 0 0 16px;
+    cursor: pointer;
+}
+
+.btn-noborder {
+ box-shadow: none;
+ border: none;
+}
+
+
+
+/*
+* VDC Usage Details
+*/
+
+.status-enable-sm{
+  background: url('../images/vmware/icon-enable-sm.png') left center no-repeat;
+  padding: 0 0 0 15px;
+}
+
+.status-disable-sm{
+  background: url('../images/vmware/icon-disable-sm.png') left center no-repeat;
+  padding: 0 0 0 15px;
+}
+
+.i-disable { background-image: url(../images/vmware/icon-disable-sm.png); }
+.i-enable { background-image: url(../images/vmware/icon-enable-sm.png); }
+
+.i-user-disable { background-image: url(../images/vmware/icon-switch-disable.png); }
+.i-user-enable { background-image: url(../images/vmware/icon-switch-enable.png); }
+
+.panel-small-title {
+    font-size: 14px;
+}
+
+#virtualMachine-details-tabs-container > div:nth-child(1) > div:nth-child(1){
+    left:-4px;
+}
+
+/*
+* First Login Dashboard view
+*/
+.first-login-create-vdc-cloud-list {
+  height: 120px;
+  text-align: center;
+  margin: 0 18% 40px 18%;
+  padding: 5px 0;
+  border:1px solid #e7e7e7;
+}
+
+.first-login-create-vdc-cloud-list .panel-medium-title,  {
+  margin: 20px 0 20px 0;
+  font-size: 22px;
+  text-transform: none;
+  font-family: ProximaNovaSoft-Regular;
+}
+
+.first-login-create-vdc-cloud-list-setup .x-panel-body {
+  font-family: ProximaNovaSoft-Regular;
+  font-size: 16px;
+}
+
+.first-login-create-vdc-cloud-list .resource-field-container {
+  margin: 20px 0;
+}
+
+.first-login-create-vdc-cloud-list .resource-field {
+    font-family: ProximaNovaSoft-Bold;
+    color: #3d6285;
+    font-size: 30px;
+    width: 24%;
+    display: inline-block;
+    *display: inline;
+    zoom:1;
+}
+
+.first-login-create-vdc-cloud-list .resource-field .resource-note {
+  display: block;
+  font-size: 14px;
+  color:#706F72;
+}
+
+.first-login-create-vdc-cloud-list .resource-field .resource-link {
+    text-decoration:underline;
+    cursor:default;
+    color: #3d6285;
+}
+
+.panel-large-notice {
+  text-align: center;
+  font-size: 22px;
+  font-family: ProximaNovaSoft-Regular;
+}
+
+.panel-medium-notice {
+  text-align: center;
+  font-size: 16px;
+  font-family: ProximaNovaSoft-Regular;
+}
+
+.tab-help-text {
+    text-align: left;
+}
+
+.panel-contextual-notice {
+  background-color: #deeff7;
+  border-radius: 4px;
+}
+
+.panel-contextual-notice h3 {
+  font-family: ProximaNovaSoft-Bold;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.panel-contextual-notice .x-panel-default {
+  background-color: #deeff7;
+}
+.panel-contextual-notice .x-panel-body-default {
+    background: #deeff7;
+    border-color: transparent;
+    border-style: none;
+}
+.first-login-create-vdc-cloud-list .cloud-name {
+  font-family: ProximaNovaSoft-Regular;
+  font-size: 14px;
+  color:#706F72;
+}
+/******************************************************************************
+*                          Network List                                  *
+*******************************************************************************/
+div.network-card {                 /* All classes to be corrected*/
+    float: left;
+    width: 380px;
+    height: 210px;
+    background-color: white;
+    margin: 5px;
+    padding: 12px;
+    border: 2px solid #eee;
+    overflow: auto;
+}
+
+div.network-card:hover {
+  box-shadow: 3px 3px 13px #BBBBBB;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7E7E7;
+}
+
+div.network-card p.x-panel-header-text-default {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 6px;
+}
+
+.network-card .prop-label {
+  width: 150px;
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+.network-card .prop-value {
+  font-weight: bold;
+}
+
+.network-card .x-panel-body-default {
+  margin: 6px 0 0 0;
+}
+
+div.network-card div.network-resource {margin-top: 12px;}
+div.network-card p.network-resource-total, div.network-resource-graph p.network-resource-total {/*float: left;*/}
+div.network-card p.network-resource-used, div.network-resource-graph p.network-resource-used {float: right; font-size: 0.8em;}
+div.network-card span.network-resource-label {
+    /*display: inline-block;*/
+    margin-right: 10px;
+}
+.network-card .network-hide{
+    display: none;
+}
+.network-card .network-show{
+    display: block;
+}
+.network-state-active, .gateway-state-active{
+/*  background: url('../images/vmware/icon-enable-sm.png') left center no-repeat;
+  padding: 0 0 15px 15px;
+  float: right;*/
+}
+.network-state-inactive, .gateway-state-inactive, .card-error {
+  background: url('../resources/themes/images/ares/icon/16-alert.png') left center no-repeat;
+  float: right;
+  height: 16px;
+  position: relative;
+  right: -10px;
+  top: -33px;
+  width: 16px; 
+}
+
+.card-locked{
+  background: url('../resources/themes/images/ares/icon/16-locked.png') left center no-repeat;
+  float: right;
+  height: 16px;
+  position: relative;
+  right: -10px;
+  top: -33px;
+  width: 16px;
+}
+
+.card-unlocked{
+  background: url('../resources/themes/images/ares/icon/16-unlocked.png') left center no-repeat;
+  float: right;
+  height: 16px;
+  position: relative;
+  right: -10px;
+  top: -33px;
+  width: 16px;
+}
+
+.card-delete {
+    background: url('../resources/themes/images/ares/icon/16-delete.png') left center no-repeat;
+    float: right;
+    height: 16px;
+    position: relative;
+    right: 30px;
+    top: -33px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.card-loading {
+  background: url('../images/loading.gif') left center no-repeat;
+  float: right;
+  height: 20px;
+  position: relative;
+  right: -10px;
+  top: -43px;
+  width: 20px;   
+}
+
+.rule-list li {
+    list-style-type: disc;
+    margin-left: 35px;
+}
+
+.card-badge {
+    height: 20px; /* default is 20, override in other classes */
+    width: 20px; /* default is 20, override in other classes */
+    display:inline-block;
+    vertical-align:text-bottom;
+}
+.card-dps {
+    background: url('../resources/themes/images/ares/icon/20-dps-provisioned.png') left center no-repeat;
+}
+.card-dr {
+    background: url('../images/26-dr-enabled.png') left center no-repeat;
+    width: 26px;
+}
+
+.card-separator {
+    width:1px;
+    padding-right:10px;
+    margin-left:10px;
+    background: url('../resources/themes/images/ares/sizer/separator-20.png') left top no-repeat;
+}
+
+.gw-card-loading {background: url("../images/loading.gif") no-repeat;float:right;height:20px;position:relative;right:-10px;top:-26px;width:20px;}
+.gw-card-error {background: url('../resources/themes/images/ares/icon/16-alert.png') left center no-repeat;float: right;height: 16px;position: relative;right: -10px;top: -26px;width: 16px;}
+.gw-card-delete {background: url('../resources/themes/images/ares/icon/16-delete.png') left center no-repeat;float: right;height: 16px;position: relative;right: 30px;top: -26px;width: 16px;cursor: pointer;}
+/******************************************************************************
+*                         Network List (END)                                 *
+*******************************************************************************/
+
+
+
+
+
+/******************************************************************************
+*                          Users and Roles                                 *
+*******************************************************************************/
+.role-user-name {
+   font-size: 12px;
+   font-weight: bold;
+   font-family: ProximaNovaSoft-Regular;
+}
+.role-disabled {
+   color: gray;
+   font-size: 12px;
+   font-family: ProximaNovaSoft-Regular;
+}
+.role-applicable {
+   font-size: 12px;
+   font-family: ProximaNovaSoft-Regular;
+}
+
+.x-grid-row .user-status-Inactive {
+    position: relative;
+}
+
+/* The text content for this rule is added in the JavaScript */
+.x-grid-row .user-status-Inactive:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+}
+
+/* Select Image Card - Add Virtual Machine Wizard   */
+.ares-grid-row {
+  background-color: #F7F7F7;
+  margin-bottom: 2px;
+  color: #706F72;
+  font-family: Arial,helvetica,sans-serif;
+  font-size: 13px;
+  padding: 7px 0 7px 5px;
+}
+
+.ares-grid-row .image-selector-label {
+  width: 60%;
+  display: inline-block;
+  *display: block;
+  zoom:1;
+}
+
+.ares-grid-row .select-image-button-two, .ares-grid-row .select-image-button-one {
+  width: 20%;
+  display: inline-block;
+  *display: block;
+  zoom:1;  
+}
+.select-image-button-one .select-image-button-two {
+    font-size: 12px;
+    font-weight: bold;
+    width: 20%;
+    display: inline-block;
+    *display:inline;
+    zoom:1;
+}
+.os-images-hide-button{
+  visibility: hidden;
+}
+.os-images-show-button{
+  visibility: visible;
+}
+.selected-image-panel{
+  border: 1px solid #d2d3d4;
+}
+
+.form-label-link{
+ text-decoration:underline;
+ cursor: pointer;
+ color: #3d6285;
+}
+
+.form-read-only-field {
+    background-color: #ddd;
+    background-image: none;
+}
+
+.x-menu-item-active:hover {
+  background-color: #dfeff7;
+}
+
+.x-menu-item-active .x-menu-item-link {
+    border: 1px solid #dfeff7;
+}
+
+.region-list .x-boundlist-item.x-boundlist-item-over{
+    background-color: #dfeff7;
+}
+
+.x-menu-item-icon.x-menu-item-8px {
+  height: 8px;
+  top: 11px;
+}
+
+/*
+ * Customize VM wizard view
+ */
+.customize-vm-title {
+ font-size: 14px;
+ font-family: ProximaNovaSoft-Bold;
+ text-transform: uppercase;
+ 
+}
+
+.customize-vm-tip {
+  font-family: Arial,helvetica,sans-serif;
+  font-style: italic;
+  font-size: 12px;
+
+}
+
+.customize-vm-set-values {
+  background-color: #f0f1f1;
+}
+
+.customize-vm-set-values .x-panel-body-default,  .customize-vm-set-values .x-panel-default {
+  background-color: #f0f1f1;
+}
+
+.customize-vm-set-values .x-panel-body-default {
+  border: none;
+}
+
+.x-btn-default-small-disabled .x-btn-inner .customize-vm-resourcesize-title,
+.x-btn-default-small-disabled .x-btn-inner .customize-vm-resourcesize-details {
+    color: #706F72;
+}
+.customize-vm-resourcesize-title {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: ProximaNovaSoft-Bold;
+  text-transform: uppercase;
+  color: #706F72;
+}
+.customize-vm-resourcesize-details {
+  color: #706F72;
+  font-family: Arial,helvetica,sans-serif;
+  font-size: 12px;
+}
+.customize-vm-available-storage-title{padding:0 4px;}
+
+
+.customize-vm-set-values .x-panel-body .form-label {
+  width: auto;
+  font-weight: normal;
+}
+
+/* Select Network VM wizard view */
+.select-network-vm-tip {
+    margin:5px 0 0 20px;
+    font-family: Arial,helvetica,sans-serif;
+}
+
+/* Prompts */
+.ares-prompt {
+  background-color: #fff;
+  font-family: Arial,helvetica,sans-serif;
+}
+
+.ares-prompt .x-window-header-default-top {
+  background-color: #fff
+}
+
+.ares-prompt .x-window-body-default {
+  font-family: Arial,helvetica,sans-serif;
+  font-size: 13px;
+}
+
+#add-user-info-toast .x-window-header-text-default{
+    font-size: 16px;
+    display: inline-block;
+    white-space: normal;
+    padding-right: 30px;
+}
+
+.actionTT.ares-notification h3{
+  font-size: 14px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.actionTT.ares-notification h3.error {
+  padding-left: 23px;
+  min-height: 20px;
+  background: url('../resources/themes/images/ares/icon/16-alert.png') left top no-repeat;
+}
+
+.actionTT.ares-notification h3.success {
+  padding-left: 23px;
+  min-height: 20px;
+  background: url('../resources/themes/images/ares/icon/16-confirmation-toast.png') left top no-repeat;
+}
+
+.actionTT.ares-notification h3.info {
+    padding-left: 23px;
+    min-height: 20px;
+    background: url('../images/vmware/icon_warning.png') left top no-repeat;
+}
+
+.actionTT.ares-notification h3.loading {
+  padding-left: 23px;
+  min-height: 20px;
+  background: url('../images/loading.gif') left top no-repeat;
+}
+
+.actionTT.ares-notification .content {
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+  padding: 0px 20px 5px 5px;
+}
+
+.actionTT.ares-notification .simple-content {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+}
+
+.x-window-body .simple-content {
+    margin-bottom: 15px;
+}
+
+.actionTT.ares-notification .close-button {
+    background: url('../resources/themes/images/ares/icon/20-close.png') left center no-repeat;
+    float: right;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+}
+
+.actionTT.ares-notification .content .reset-text {
+    color: #3D6285;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actionTT.ares-notification .content .reset-text:hover {
+    text-decoration: underline;
+}
+
+/* VDC Users */
+#vdc-users-list-view.x-grid-with-row-lines .x-grid-cell-inner {
+  white-space: normal;
+  height: auto;
+  line-height: 15px;  
+}
+
+/* VM Details Settings Tab */
+.vm-settings-key {
+    float: left;
+    clear: both;
+    width: 30%;
+}
+.vm-settings-values {
+    float: left;
+}
+.vm-settings-metrics-info {
+    width: 550px;
+}
+.vm-settings-metrics-info .vrbar span {
+    width: 50px;
+    padding:3px 8px 0 0;
+    text-align: right;
+    border-right: 1px solid #999;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.vm-settings-metrics-info .vrbar {
+    float: right;
+}
+.vm-setting-row {
+    min-height: 30px;
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 18px;
+}
+.vm-setting-edit-row:hover {
+    background-color: #DFEFF7;
+    cursor: pointer;
+}
+
+/* Cloud Info tooltip */
+.cloud-info-tooltip .x-tip-header {
+  height: 25px!important;
+}
+
+.cloud-info-tooltip .x-tip-header .x-box-inner {
+  height: 25px!important;
+}
+.cloud-info-tooltip .x-tip-header .x-tool  {
+ margin: 10px 10px 0 0;
+}
+
+.ares-view-selection-radio {
+  float: left;
+  margin-right:5px;
+}
+
+/* Views within VM Setting Tooltips*/
+.vm-tooltip-view-selector.x-panel-default{
+  cursor: pointer;
+  margin: 0 0 10px 0;
+  padding: 10px;
+}
+
+.vm-tooltip-view-selector.x-panel-default.x-item-selected, .vm-tooltip-view-selector.x-panel-default:hover {
+  box-shadow: 3px 3px 13px #BBBBBB;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7E7E7;   
+} 
+
+.vm-tooltip-view-selector.name {
+   font-size: 1.2em;
+   font-weight: normal !important;
+}
+.vm-tooltip-view-selector.field.cloud-title {
+    font-size: 12px;
+    font-family:'ProximaNovaSoft-Regular';
+    width: 44%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+.vm-tooltip-view-selector.field {
+    font-size: 12px;
+    font-weight: bold;
+    width: 44%;
+    display: inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.vm-tooltip-view-list-header {
+  font-family:'ProximaNovaSoft-Bold';
+  font-size: 12px;
+  padding: 0 0 0 15px;
+}
+
+.vm-tooltip-view-list-header .header-col.first-col {
+  font-family:'ProximaNovaSoft-Regular';
+  width: 4%;
+}
+
+.vm-tooltip-view-list-header .header-col {
+  width:40%;
+  display: inline-block;
+  *display:inline;
+  zoom:1;
+}
+
+.change-password-rules, .vdc-lock-unlock-info{
+    display: inline-block;
+    *display: inline;
+    zoom:1;
+}
+
+.change-password-rules li, .vdc-lock-unlock-info li {
+    list-style-type: disc;
+    margin-left: 35px;
+}
+
+.modalWZ.ares-finish h3.loading {
+  background: url('../images/loading.gif') left top no-repeat;
+  height: 25px;
+  width:25px;
+  z-index: 10000;
+}
+
+.x-livesearch-match {
+  background-color: #FFFF00
+}
+
+.tech-support-label {
+   padding: 0 0 0 30px;
+  background: url(../images/tech-support-icon.png) left top no-repeat;
+  text-align: left;
+}
+
+.tech-support-label a{
+ color: #3D6285;
+ text-decoration: none;
+}
+
+.ares-prompt .purchase-icon {
+    background: url(../images/vmware/paid-icon-dialog.png) no-repeat;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+
+/******************************************************************************
+*                         About Dialog                                *
+*******************************************************************************/
+
+.about-large {
+    text-align: left;
+    font-size: 20px;
+    font-family: ProximaNovaSoft-Regular;
+}
+
+.about-text {
+    text-align: left;
+    font-size: 14px;
+    color: #706f72;
+    font-family: ProximaNovaSoft-Regular;
+}
+
+/******************************************************************************
+*                         Region Down Mask                                    *
+*******************************************************************************/
+
+.region-down-mask{
+    background: none repeat scroll 0 0 #63B1EB;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-image: url('../images/sad-cloud-region.png');
+    background-repeat: no-repeat;
+    background-position:50% 40%;
+}
+
+.region-down-mask div{
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+    left: 20%;
+    top: 65%;
+    width: 60%;
+}
+
+.region-down-mask div a{
+    color: #336699;
+}
+
+/******** VM Monitoring Tab ********/
+.vm-monitoring-duration {
+   font-weight: bold;
+   font-size: 13px;
+   color: #3d6285;
+   padding: 0 10px;
+   text-align: center;
+   background: url('../resources/themes/images/ares/sizer/separator-20.png') left top no-repeat;
+   cursor:pointer;
+}
+.vm-monitoring-duration-selected {
+    font-weight: normal;
+    color: #333;
+}
+.vm-monitoring-reload-btn {
+    border: none;
+    box-shadow: none;
+    background: url('../resources/themes/images/ares/icon/23-reload.png') center top no-repeat;
+}
+.vm-monitoring-chart-tip .x-tip-anchor {
+    background: url('../resources/themes/images/ares/tip/tip-arrow.png') left center no-repeat;
+    border: none;
+    width: 7px;
+    height: 13px;
+}
+
+
+
+/*******************************************************************************
+* DPS *
+********************************************************************************/
+
+.dps-dashboard-counts{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dps-text{
+   font-family:'Helvetica';
+   font-color: #333333;
+}
+
+.dps-dashboard-usage{
+    font-size: 64px;
+    font-family:'Helvetica';
+    text-align: center;
+    font-color: #333333;
+}
+
+.dps-dashboard-total{
+    font-size: 24px;
+    font-family:'Helvetica';
+    text-align: center;
+    font-color: #333333;
+}
+.dps-dashboard-text{
+    font-size: 14px;
+    font-color: #333333;
+    font-family:'Helvetica';
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dps-dashboard-selected{
+    background-color: #b2e8fa;
+}
+
+.dps-dashboard-hover{
+    background-color: #EEEEEE;
+}
+
+.dps-dashboard-selected div{
+    background-color: inherit;
+}
+
+.dps-dashboard-hover div{
+    background-color: inherit;
+}
+
+#dps-vdc-detail-title{
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+
+#dps-vdc-detail-separator{
+   float: left;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+#dps-vdc-detail-menu-btn{
+    float:left;
+    text-transform: none;
+}
+
+.dps-storage-key{
+    float:left;
+    clear:both;
+    width: 30%;
+    height: 25px;
+}
+.dps-storage-value{
+    float:left;
+    width: 10%;
+}
+.dps-storage-purchase-btn{
+    float: left;
+    width: 57%;
+    text-align: right;
+}
+.dps-resource-label{
+    font-size: 14px;
+}
+.dps-text-small {
+    font-size:10px;
+}
+.dps-hidden{
+    visibility: hidden;
+}
+.dps-help-tip{
+  background: url('../resources/themes/images/ares/icon/16-help.png') left center no-repeat;
+  padding: 0 0 0 16px;
+  cursor: pointer;
+}
+.dps-storage-chart-tip .x-tip-anchor {
+    background: url('../resources/themes/images/ares/tip/tip-arrow.png') left center no-repeat;
+    border: none;
+    width: 7px;
+    height: 12px;
+}
+
+
+
+/*************** Activity Logs ***************/
+#dashboard-activity-log .reload {
+    padding: 0;
+}
+#dashboard-activity-log .reload .x-btn-inner,
+#dashboard-activity-log .reload .x-btn-icon {
+    width: 23px;
+    height: 20px;
+}
+
+#dashboard-activity-log .x-splitter-handle,
+#dashboard-activity-log .x-collapse-el {
+    background-position: center 0;
+    height: 7px;
+}
+#dashboard-activity-log .x-splitter-handle {
+    background-image: url('../resources/themes/images/ares/sizer/split-bg.png');
+    background-repeat: repeat-x;
+}
+#dashboard-activity-log .x-collapse-el {
+    background-image: url('../resources/themes/images/ares/sizer/split-handle.png');
+    background-repeat: no-repeat;
+    border-left: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    cursor: row-resize;
+    margin-left: -12px;
+    width: 24px;
+}
+
+#dashboard-activity-log .details .x-btn {
+    box-shadow: none;
+    border: none;
+    background: #00b8fa; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjhmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDhmYzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #00b8fa 0%, #008fc2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b8fa), color-stop(100%,#008fc2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #00b8fa 0%,#008fc2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #00b8fa 0%,#008fc2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #00b8fa 0%,#008fc2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #00b8fa 0%,#008fc2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b8fa', endColorstr='#008fc2',GradientType=0 ); /* IE6-8 */
+    margin-left: 10px;
+}
+#dashboard-activity-log .details .x-btn-center {
+    height: 20px;
+}
+#dashboard-activity-log .details .x-btn-inner {
+    color: #FFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 10px;
+}
+#dashboard-activity-log .details .activityLogTitle {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 4px;
+    padding-left: 8px;
+}
+#dashboard-activity-log .details .activityLogTitle.first {
+    border-left: 4px solid #00B3F3;
+    padding-left: 4px;
+}
+#dashboard-activity-log .details p {
+    margin-left: 8px;
+}
+
+#dashboard-activity-log .x-grid-with-row-lines .x-grid-cell-inner {
+    height: 33px;
+}
+
+
+
+/****************** General Grid Icons *******************/
+.x-grid-cell.x-ares-icon {
+    padding-left: 26px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 8px center;
+    background-color: transparent;
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-vm {
+    background-image: url("../images/resourcetype/vchs-virtualmachine-16x.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-vdc {
+    background-image: url("../images/resourcetype/vchs-virtualdatacenter-16x.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-gateway {
+    background-image: url("../images/resourcetype/vchs-gateways-16x.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-network {
+    background-image: url("../images/resourcetype/vchs-networks-16x.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-user {
+    background-image: url("../images/resourcetype/vchs-users-16x.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-error {
+    background-image: url("../images/vmware/icon_error.png");
+}
+/* To fix ones actual icons are available */
+.x-grid-cell.x-ares-icon.x-ares-icon-vapp, .x-grid-cell.x-ares-icon.x-ares-icon-restore, .x-grid-cell.x-ares-icon.x-ares-icon-adhoc, .x-grid-cell.x-ares-icon.x-ares-icon-backup, .x-grid-cell.x-ares-icon.x-ares-icon-scheduled {
+    background-image: url("../images/resourcetype/vchs-virtualmachine-16x.png");
+}
+
+/* DR2C Status icons */
+.x-grid-cell.x-ares-icon.x-ares-icon-warning {
+    background-image: url("../images/vmware/icon_warning.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-success {
+    background-image: url("../images/vmware/icon_success.png");
+}
+.x-grid-cell.x-ares-icon.x-ares-icon-running {
+    background-image: url("../images/vmware/icon_running.png");
+}
+
+
+/* Storage Tiering  */
+.tier-collapsed .resource-storage-label, .resource-parent .tier-collapsed {
+    padding-left: 12px;
+    background: url('../images/vmware/arrow-mod-close-10.png') left center no-repeat;
+    cursor: pointer;
+}
+.tier-expanded .resource-storage-label, .resource-parent .tier-expanded {
+    padding-left: 12px;
+    background: url('../images/vmware/arrow-mod-open-10.png') left center no-repeat;
+    cursor: pointer;
+}
+.tier-collapsed .resource-storage-label:hover, .resource-parent .tier-collapsed:hover, .tier-expanded .resource-storage-label:hover, .resource-parent .tier-expanded:hover {
+    text-decoration: underline;
+}
+#region-dashboard .region-dashboard-storage-profiles {
+    padding-left: 15px;
+}
+#region-dashboard .region-dashboard-storage-profiles .resource-value-progress {
+    margin-left: 75px;
+}
+#region-dashboard .region-dashboard-storage-profiles .resource-label {
+    font-size:11px;
+    width:50px;
+    white-space:normal;
+    margin-right: 15px;
+}
+
+/* Network */
+.network-context-menu-cont p.x-panel-header-text-default{float:left;width:92%;}
+.network-context-menu,.network-context-menu:hover {float:right;height:24px;width:16px;}
+.menu-title .x-btn-inner{font:16px arial !important;color:#333;}
+.delete-network-icon {background: url('../resources/themes/images/ares/icon/16-delete.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);text-align: center;cursor:pointer;}
+.add-network-icon {background: url('../resources/themes/images/ares/icon/16-add.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);text-align: center;cursor:pointer;}
