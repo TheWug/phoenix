@@ -94,11 +94,15 @@ public class Controllers {
 
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	@RequestMapping(value = "/verify2fa", method = RequestMethod.POST)
-	public String verify2fa(@RequestParam(value = "authcode", required = true) String code, Model model) {
+	public String verify2fa(@RequestParam(value = "authcode", required = true, defaultValue="x") String code, Model model) {
 
 		logger.info("Validating authcode {} for user {}", code, SecurityContextHolder.getContext().getAuthentication()
 				.getName());
-		if (this.valdate2fa(code)) {
+		if(code.equals("x")) {
+			model.addAttribute("errorMessage", "You have to enter Authentication code");
+			return "2fa";
+		}		
+		else if (this.valdate2fa(code)) {
 			return "home";
 		} else {
 			// SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false);
