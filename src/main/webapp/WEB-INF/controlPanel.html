@@ -31,8 +31,9 @@
 		<ul>
 			<li><a th:href='@{/gohome}'><span>Home</span></a></li>
 			<li class='last'><a th:href='@{/enroll2fa}'><span th:text="${isEnrolled}"></span></a></li>
-			<li class='last'><a th:href='@{/logout}'><span>Sign
-						Out</span></a></li>
+			<li class='last'><a onClick="document.getElementById('my_logout').submit()"><span>Sign
+							Out</span></a></li>
+			<form id='my_logout' action='#' th:action='@{/logout}' method='POST'></form>
 
 		</ul>
 	</div>
